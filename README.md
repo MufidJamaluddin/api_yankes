@@ -12,15 +12,25 @@ Requirements
 
 Installation
 ---
-- `git clone https://github.com/cekdiri/api_yankes.git`
-- `cd api_yankes`
+- Clone Aplikasi
+    `git clone https://github.com/cekdiri/api_yankes.git`
+    `cd api_yankes`
+
+- Buat Virtual Environtment
+    Install virtual environtment : `python -m pip install virtualenv`
+    Buat virtual environtment : `virtualenv env`
+    Jalankan virtual environtment : `./env/Scripts/activate`
+    Install library aplikasi dalam virtual environtment : `python -m pip install requirements.pip`
+
 - Jika belum punya pipenv, jalankan `pip install pipenv`
 - Jalankan `pipenv install`
 
 
 Usage
 ---
-    Copy file settings.cfg.tpl, rename jadi `settings.cfg`. Isikan data config.
-    Jalankan `python main.py` di cron. 
-    Jalankan `python serve.py` untuk menjalankan API servernya
+    Ubah `settings.cfg`. Isikan data config.
+    Jalankan flask command `db_migrate` ketika pertama kali run aplikasi.
+    Jalankan `flask run` atau `python wsgi.py` untuk menjalankan API servernya.
+    Jalankan flask `sync_data` di cron job.
+    
 
